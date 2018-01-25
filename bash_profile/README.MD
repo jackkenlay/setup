@@ -9,9 +9,10 @@
 
 ## Setup Bash-Git-Prompt (taken from [here](https://github.com/magicmonty/bash-git-prompt))
 ### Install updates (taken from [here](https://github.com/magicmonty/bash-git-prompt)):
-```brew update
 ```
-```brew install bash-git-prompt```
+brew update```
+```
+brew install bash-git-prompt```
 
 ### Then:
 * Copy the text from this repo's .bash_profile file to your ~/.bash_profile (create it if it doesnt exist)

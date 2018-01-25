@@ -15,5 +15,5 @@
 * https://github.com/magicmonty/bash-git-prompt
 
 ### Then:
-* Copy this file to ~/.bash_profile
+* Copy the text from this repo's .bash_profile file to your ~/.bash_profile (create it if it doesnt exist)
 * Restart your terminal

@@ -9,7 +9,8 @@
 
 ## Setup Bash-Git-Prompt (taken from [here](https://github.com/magicmonty/bash-git-prompt))
 ### Install updates (taken from [here](https://github.com/magicmonty/bash-git-prompt)):
-```brew update```
+```brew update
+```
 ```brew install bash-git-prompt```
 
 ### Then:

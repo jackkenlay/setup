@@ -1,7 +1,7 @@
 # Bash Profile
 
 ## Setup Git-Complete
-### Install Homebrew (taken from https://brew.sh/):
+### Install Homebrew (taken from [here](https://brew.sh/)):
 ```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"``` 
 
 ### Install Git and Bash-Complete (taken from https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion):

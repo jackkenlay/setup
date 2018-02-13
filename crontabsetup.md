@@ -1,4 +1,4 @@
-# Reminder every 60 minutes for a popup
+# Popup every 45 minutes
 
 ## Prereq
 ```brew install terminal-notifier```

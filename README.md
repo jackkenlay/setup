@@ -11,6 +11,7 @@
 
 # TODO
 
+### Change videos to youtube playlist for coding
 ### bash_alias for servers
 ### vim
 ### ESLint

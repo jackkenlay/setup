@@ -1,5 +1,5 @@
 # aliases
-source <(curl -s https://github.com/jackkenlay/setup/blob/master/bash_profile/.bash_profile)
+# source <(curl -s https://github.com/jackkenlay/setup/blob/master/bash_profile/.bash_profile)
 echo "Loaded from https://github.com/jackkenlay/setup/edit/master/bash_profile/.bash_profile"
 
 alias ll="ls -lhA"                                      #Preferred 'ls' implimentation

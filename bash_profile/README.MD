@@ -14,3 +14,5 @@
 * Copy the text from this repo's .bash_profile file to your ~/.bash_profile (create it if it doesnt exist)
 * Restart your terminal
 * Import the TerminalPro.terminal file from this folder to Mac terminal profiles. (Terminal -> Preferences -> Profiles [then beneath all of the profiles is a settings button, click on import]
+
+## https://natelandau.com/my-mac-osx-bash_profile/

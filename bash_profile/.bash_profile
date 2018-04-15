@@ -1,10 +1,11 @@
 # aliases
 # source <(curl -s https://github.com/jackkenlay/setup/blob/master/bash_profile/.bash_profile)
-echo "Loaded from https://github.com/jackkenlay/setup/edit/master/bash_profile/.bash_profile"
+echo "/Users/jackkenlay/personal/setup/bash_profile/.bash_profile"
 
 alias ll="ls -lhA"                                      #Preferred 'ls' implimentation
 alias "ij=open -a /Applications/IntelliJ\ IDEA\ CE.app" #Opens intelli J
 alias f='open -a Finder ./'                             #Opens finder in current location
+alias "vs=open -a /Applications/Visual\ Studio\ Code.app/"
 
 # example function
 example-function(){

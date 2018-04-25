@@ -1,6 +1,8 @@
 # aliases
 # source <(curl -s https://github.com/jackkenlay/setup/blob/master/bash_profile/.bash_profile)
 echo "/Users/jackkenlay/personal/setup/bash_profile/.bash_profile"
+echo "Alias' available:"
+echo "f, ls, vs, ij, gp"
 
 alias ll="ls -lhA"                                      #Preferred 'ls' implimentation
 alias "ij=open -a /Applications/IntelliJ\ IDEA\ CE.app" #Opens intelli J

@@ -6,12 +6,17 @@ alias ll="ls -lhA"                                      #Preferred 'ls' implimen
 alias "ij=open -a /Applications/IntelliJ\ IDEA\ CE.app" #Opens intelli J
 alias f='open -a Finder ./'                             #Opens finder in current location
 alias "vs=open -a /Applications/Visual\ Studio\ Code.app/"
+alias gp="doubleGitPull"
 
 # example function
 example-function(){
   echo "example";
 }
 
+doubleGitPull(){
+  echo "pulling thrice";
+  git pull && git pull && git pull;
+}
 # colours
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 export CLICOLOR=1

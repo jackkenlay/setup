@@ -4,11 +4,9 @@ echo "/Users/jackkenlay/personal/setup/bash_profile/.bash_profile"
 echo "Alias' available:"
 echo "f, ls, vs, ij, gp"
 
-#todo
-## Add in git pull set up, so updates from this repo happen automatically
-## Improve the initial screen
-echo "Pulling latest repo"
-cd ~/work/setup && git pull && git pull && cd ~/
+echo "Pulling latest setup repo"
+cd ~/personal/setup && git pull && git pull && cd ~/
+
 
 
 alias ll="ls -lhA"                                      #Preferred 'ls' implimentation

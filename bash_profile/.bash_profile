@@ -20,7 +20,7 @@ example-function(){
   echo "example";
 }
 
-setup-camelot(){
+##setup-camelot(){
   ## close all windows/process
   ## open chrome
   ## open slack
@@ -30,7 +30,7 @@ setup-camelot(){
   ## open terminal in ~/work/illionoise-aem
   ## open another terminal in the npm bit
   ## open spotify
-}
+##}
 
 doubleGitPull(){
   echo "pulling thrice";

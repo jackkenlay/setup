@@ -4,6 +4,13 @@ echo "/Users/jackkenlay/personal/setup/bash_profile/.bash_profile"
 echo "Alias' available:"
 echo "f, ls, vs, ij, gp"
 
+#todo
+## Add in git pull set up, so updates from this repo happen automatically
+## Improve the initial screen
+echo "Pulling latest repo"
+cd ~/work/setup && git pull && git pull && cd ~/
+
+
 alias ll="ls -lhA"                                      #Preferred 'ls' implimentation
 alias "ij=open -a /Applications/IntelliJ\ IDEA\ CE.app" #Opens intelli J
 alias f='open -a Finder ./'                             #Opens finder in current location
@@ -13,6 +20,18 @@ alias gp="doubleGitPull"
 # example function
 example-function(){
   echo "example";
+}
+
+setup-camelot(){
+  ## close all windows/process
+  ## open chrome
+  ## open slack
+  ## open skype
+  ## open IJ in ~/work/illinois-aem/ (double check)
+  ## start the camelot AEM
+  ## open terminal in ~/work/illionoise-aem
+  ## open another terminal in the npm bit
+  ## open spotify
 }
 
 doubleGitPull(){

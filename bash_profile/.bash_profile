@@ -4,8 +4,8 @@ echo "/Users/jackkenlay/personal/setup/bash_profile/.bash_profile"
 echo "Alias' available:"
 echo "f, ls, vs, ij, gp"
 
-echo "Pulling latest setup repo"
-cd ~/personal/setup && git pull && git pull && cd ~/
+# echo "Pulling latest setup repo"
+# cd ~/personal/setup && git pull && git pull && cd ~/
 
 
 

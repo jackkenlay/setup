@@ -10,7 +10,7 @@ echo "f, ls, vs, ij, gp"
 
 
 alias ll="ls -lhA"                                      #Preferred 'ls' implimentation
-alias "ij=open -a /Applications/IntelliJ\ IDEA\ CE.app" #Opens intelli J
+alias "ij=open -a /Applications/IntelliJ\ IDEA.app" #Opens intelli J
 alias f='open -a Finder ./'                             #Opens finder in current location
 alias "vs=open -a /Applications/Visual\ Studio\ Code.app/"
 alias gp="doubleGitPull"

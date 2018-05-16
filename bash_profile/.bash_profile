@@ -23,18 +23,30 @@ example-function(){
 setup-camelot(){
    ## close all windows/process
    echo "Setting up Camelot"
+   echo "Opening JAR"
    open /System/Library/CoreServices/Jar\ Launcher.app/ ~/AEM/camelot_il_aem/cq-quickstart-p4502.jar 
+   echo "Opening Mail"
    open -a /Applications/Mail.app/
+   echo "Opening Slack"
    open -a /Applications/Slack.app/
+   echo "Opening Spotify"
    open -a /Applications/Spotify.app/
+   echo "Opening Skype"
    open -a /Applications/Skype.app/
+   echo "Opening Chrome"
    open -a /Applications/Google\ Chrome.app/
    echo "Waiting for Jar to finish booting up"
    sleep 30
-   cd ~/work/illinois-aem/ && ij .
+   echo "Opening IJ"
+   cd ~/work/illinois-aem/ && ll && ij .
+   echo "Npm Install"
+   cd ~/work/illinois-aem/ui.apps/src/main/ && npm install && npm run build && cd ~/work/illinois-aem/ && ll
+   echo "Maven Install"
    mvn clean install -PautoInstallPackage
    #open second terminal
+   echo "Opening Second terminal"
    open -a Terminal "~/work/illinois-aem/" 
+   echo "NPM Install"
    cd ~/work/illinois-aem/ui.apps/src/main/ && npm install && npm run build && npm run aem:watch
    echo "Finished"
 }

@@ -20,17 +20,23 @@ example-function(){
   echo "example";
 }
 
-##setup-camelot(){
-  ## close all windows/process
-  ## open chrome
-  ## open slack
-  ## open skype
-  ## open IJ in ~/work/illinois-aem/ (double check)
-  ## start the camelot AEM
-  ## open terminal in ~/work/illionoise-aem
-  ## open another terminal in the npm bit
-  ## open spotify
-##}
+setup-camelot(){
+   ## close all windows/process
+   open /System/Library/CoreServices/Jar\ Launcher.app/ ~/AEM/camelot_il_aem/cq-quickstart-p4502.jar 
+   open -a /Applications/Mail.app/
+   open -a /Applications/Slack.app/
+   open -a /Applications/Spotify.app/
+   open -a /Applications/Skype.app/
+   open -a /Applications/Google\ Chrome.app/
+   echo "Waiting for Jar to finish booting up"
+   sleep 30
+   cd ~/work/illinois-aem/ && ij .
+   mvn clean install -PautoInstallPackage
+   #open second terminal
+   open -a Terminal "~/work/illinois-aem/" 
+   cd ~/work/illinois-aem/ui.apps/src/main/ && npm install && npm run build && npm run aem:watch
+   echo "Finished"
+}
 
 doubleGitPull(){
   echo "pulling thrice";

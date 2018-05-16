@@ -20,6 +20,12 @@ example-function(){
   echo "example";
 }
 
+kill-all(){
+# Needs researching
+  echo "Killing all"
+  kill -9 -1
+}
+
 kill-jars(){
   echo "Killing all Java Processes"
   pkill -f 'java -jar'

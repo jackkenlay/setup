@@ -22,6 +22,7 @@ example-function(){
 
 setup-camelot(){
    ## close all windows/process
+   echo "Setting up Camelot"
    open /System/Library/CoreServices/Jar\ Launcher.app/ ~/AEM/camelot_il_aem/cq-quickstart-p4502.jar 
    open -a /Applications/Mail.app/
    open -a /Applications/Slack.app/

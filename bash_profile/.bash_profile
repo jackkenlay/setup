@@ -31,6 +31,8 @@ setup-camelot(){
    kill-jars
    echo "Opening JAR"
    open /System/Library/CoreServices/Jar\ Launcher.app/ ~/AEM/camelot_il_aem/cq-quickstart-p4502.jar 
+   echo "Opening Notes"
+   open -a /Applications/Notes.app/
    echo "Opening Mail"
    open -a /Applications/Mail.app/
    echo "Opening Slack"

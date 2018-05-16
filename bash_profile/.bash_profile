@@ -20,9 +20,15 @@ example-function(){
   echo "example";
 }
 
+kill-jars(){
+  echo "Killing all Java Processes"
+  pkill -f 'java -jar'
+}
+
 setup-camelot(){
    ## close all windows/process
    echo "Setting up Camelot"
+   kill-jars
    echo "Opening JAR"
    open /System/Library/CoreServices/Jar\ Launcher.app/ ~/AEM/camelot_il_aem/cq-quickstart-p4502.jar 
    echo "Opening Mail"

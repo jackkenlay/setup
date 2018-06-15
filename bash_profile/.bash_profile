@@ -87,11 +87,17 @@ if [ -f /usr/local/share/gitprompt.sh ]; then
     . /usr/local/share/gitprompt.sh
 fi
 
-
-export JAVA_HOME=$(/usr/libexec/java_home)
-
 M3_HOME=/usr/local/bin/apache-maven-3.5.2
 export M3_HOME
 
 PATH=$PATH:$HOME/.local/bin:$HOME/bin:$JAVA_HOME/bin:$M3_HOME/bin
 export PATH
+
+
+#Java
+#http://davidcai.github.io/blog/posts/install-multiple-jdk-on-mac/
+# Init jenv
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+

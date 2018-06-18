@@ -35,8 +35,8 @@ setup-camelot(){
    ## close all windows/process
    echo "Setting up Camelot"
    kill-jars
-   echo "Opening JAR"
-   open /System/Library/CoreServices/Jar\ Launcher.app/ ~/AEM/camelot_il_aem/cq-quickstart-p4502.jar 
+   #echo "Opening JAR"
+   #open /System/Library/CoreServices/Jar\ Launcher.app/ ~/AEM/camelot_il_aem/cq-quickstart-p4502.jar 
    echo "Opening Notes"
    open -a /Applications/Notes.app/
    echo "Opening Mail"
@@ -60,8 +60,8 @@ setup-camelot(){
    #open second terminal
    echo "Opening Second terminal"
    open -a Terminal "~/work/illinois-aem/" 
-   echo "NPM Install"
-   cd ~/work/illinois-aem/ui.apps/src/main/ && npm install && npm run build && npm run aem:watch
+   #echo "NPM Install"
+   #cd ~/work/illinois-aem/ui.apps/src/main/ && npm install && npm run build && npm run aem:watch
    echo "Finished"
 }
 

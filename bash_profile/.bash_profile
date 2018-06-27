@@ -38,28 +38,34 @@ setup-camelot(){
    #echo "Opening JAR"
    #open /System/Library/CoreServices/Jar\ Launcher.app/ ~/AEM/camelot_il_aem/cq-quickstart-p4502.jar 
    echo "Opening Notes"
-   open -a /Applications/Notes.app/
+   open -g -a /Applications/Notes.app/
    echo "Opening Mail"
-   open -a /Applications/Mail.app/
+   open -g -a /Applications/Mail.app/
    echo "Opening Slack"
-   open -a /Applications/Slack.app/
-   echo "Opening Spotify"
-   open -a /Applications/Spotify.app/
+   open -g -a /Applications/Slack.app/
+  #  echo "Opening Spotify"
+  #  open -g -a /Applications/Spotify.app/
    echo "Opening Skype"
-   open -a /Applications/Skype.app/
+   open -g -a /Applications/Skype.app/
    echo "Opening Chrome"
-   open -a /Applications/Google\ Chrome.app/
-   echo "Waiting for Jar to finish booting up"
-   sleep 30
+   open -g -a /Applications/Google\ Chrome.app/
+  #  echo "Waiting for Jar to finish booting up"
+  #  sleep 30
    echo "Opening IJ"
-   cd ~/work/illinois-aem/ && ll && ij .
-   echo "Npm Install"
-   cd ~/work/illinois-aem/ui.apps/src/main/ && npm install && npm run build && cd ~/work/illinois-aem/ && ll
-   echo "Maven Install"
-   mvn clean install -PautoInstallPackage
+   cd ~/work/illinois-aem/
+   ll
+   open -g -a /Applications/IntelliJ\ IDEA.app .
+   echo "Opening finder at AEM location"
+   open  -a Finder ~/AEM/camelot_il_aem/
+  #  echo "Npm Install"
+  #  cd ~/work/illinois-aem/ui.apps/src/main/ && npm install && npm run build && cd ~/work/illinois-aem/ && ll
+  #  echo "Maven Install"
+  #  mvn clean install -PautoInstallPackage
    #open second terminal
    echo "Opening Second terminal"
-   open -a Terminal "~/work/illinois-aem/" 
+   open -g -a Terminal "~/work/illinois-aem/"
+   echo "Opening Second terminal"
+   open -g -a Terminal "~/work/illinois-aem/"
    #echo "NPM Install"
    #cd ~/work/illinois-aem/ui.apps/src/main/ && npm install && npm run build && npm run aem:watch
    echo "Finished"

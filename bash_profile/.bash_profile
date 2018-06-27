@@ -35,8 +35,10 @@ setup-camelot(){
    ## close all windows/process
    echo "Setting up Camelot"
    kill-jars
-   #echo "Opening JAR"
-   #open /System/Library/CoreServices/Jar\ Launcher.app/ ~/AEM/camelot_il_aem/cq-quickstart-p4502.jar 
+   echo "Opening JAR"
+   open -g -a Finder ~/AEM/camelot_il_aem/cq-quickstart-p4502.jar 
+   #open -a /System/Library/CoreServices/Jar\ Launcher.app/ ~/AEM/camelot_il_aem/cq-quickstart-p4502.jar 
+  #  java -jar ~/AEM/camelot_il_aem/cq-quickstart-p4502.jar
    echo "Opening Notes"
    open -g -a /Applications/Notes.app/
    echo "Opening Mail"
@@ -55,8 +57,8 @@ setup-camelot(){
    cd ~/work/illinois-aem/
    ll
    open -g -a /Applications/IntelliJ\ IDEA.app .
-   echo "Opening finder at AEM location"
-   open  -a Finder ~/AEM/camelot_il_aem/
+  #  echo "Opening finder at AEM location"
+  #  open  -a Finder ~/AEM/camelot_il_aem/
   #  echo "Npm Install"
   #  cd ~/work/illinois-aem/ui.apps/src/main/ && npm install && npm run build && cd ~/work/illinois-aem/ && ll
   #  echo "Maven Install"

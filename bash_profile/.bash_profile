@@ -32,6 +32,10 @@ kill-jars(){
 }
 
 setup-camelot(){
+
+  # useful info:
+  #  https://www.macobserver.com/tmo/article/how-to-launch-os-x-apps-from-the-command-line
+
    ## close all windows/process
    echo "Setting up Camelot"
    kill-jars
@@ -64,13 +68,31 @@ setup-camelot(){
   #  echo "Maven Install"
   #  mvn clean install -PautoInstallPackage
    #open second terminal
-   echo "Opening Second terminal"
-   open -g -a Terminal "~/work/illinois-aem/"
-   echo "Opening Second terminal"
-   open -g -a Terminal "~/work/illinois-aem/"
-   #echo "NPM Install"
-   #cd ~/work/illinois-aem/ui.apps/src/main/ && npm install && npm run build && npm run aem:watch
-   echo "Finished"
+
+  echo "Waiting 120 seconds before npm install etc"
+  sleep 120
+
+  #  echo "Opening Second terminal"
+  #  open -g -a Terminal ~/work/illinois-aem/cd ui.apps/src/main/
+
+
+  #  open -a Terminal ~/work/illinois-aem/ui.apps/src/main/ --args 'll'
+
+  # this works
+  # osascript -e 'tell application "Terminal" to do script "ll;ll"'
+  echo "Opening Second for npm install"
+  osascript -e 'tell application "Terminal" to do script "cd ~/work/illinois-aem/ui.apps/src/main; npm run build && npm run aem:watch"'
+  # open -g -a Terminal ~/work/illinois-aem/
+
+  # echo "NPM Install"
+  # cd ~/work/illinois-aem/ui.apps/src/main/ && npm install && npm run build && npm run aem:watch
+  echo "maven install"
+  mvn clean install -PautoInstallPackage
+
+  echo "Opening Third window for Excalibur"
+  osascript -e 'tell application "Terminal" to do script "cd ~/work/illinois-aem/excalibur-mock; mvn clean install -Prun-excalibur-mock"'
+
+  echo "Finished"
 }
 
 doubleGitPull(){

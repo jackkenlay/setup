@@ -39,6 +39,7 @@ setup-camelot(){
    ## close all windows/process
    echo "Setting up Camelot"
    kill-jars
+   killall node
    echo "Opening JAR"
    open -g -a Finder ~/AEM/camelot_il_aem/cq-quickstart-p4502.jar 
    #open -a /System/Library/CoreServices/Jar\ Launcher.app/ ~/AEM/camelot_il_aem/cq-quickstart-p4502.jar 
@@ -74,23 +75,26 @@ setup-camelot(){
 
   #  echo "Opening Second terminal"
   #  open -g -a Terminal ~/work/illinois-aem/cd ui.apps/src/main/
-
-
   #  open -a Terminal ~/work/illinois-aem/ui.apps/src/main/ --args 'll'
 
   # this works
   # osascript -e 'tell application "Terminal" to do script "ll;ll"'
-  echo "Opening Second for npm install"
-  osascript -e 'tell application "Terminal" to do script "cd ~/work/illinois-aem/ui.apps/src/main; npm run build && npm run aem:watch"'
-  # open -g -a Terminal ~/work/illinois-aem/
 
   # echo "NPM Install"
   # cd ~/work/illinois-aem/ui.apps/src/main/ && npm install && npm run build && npm run aem:watch
   echo "maven install"
   mvn clean install -PautoInstallPackage
 
-  echo "Opening Third window for Excalibur"
+  killall node
+  echo "Opening Second window for Excalibur"
   osascript -e 'tell application "Terminal" to do script "cd ~/work/illinois-aem/excalibur-mock; mvn clean install -Prun-excalibur-mock"'
+
+  echo "Waiting 30 seconds for Excalibur"
+  sleep 30
+
+  echo "Opening Third for npm install"
+  osascript -e 'tell application "Terminal" to do script "cd ~/work/illinois-aem/ui.apps/src/main; npm run build && npm run aem:watch"'
+  # open -g -a Terminal ~/work/illinois-aem/
 
   echo "Finished"
 }

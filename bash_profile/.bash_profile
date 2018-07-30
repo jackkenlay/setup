@@ -7,8 +7,6 @@ echo "f, ls, vs, ij, gp"
 # echo "Pulling latest setup repo"
 # cd ~/personal/setup && git pull && git pull && cd ~/
 
-
-
 alias ll="ls -lhA"                                      #Preferred 'ls' implimentation
 alias "ij=open -a /Applications/IntelliJ\ IDEA.app" #Opens intelli J
 alias f='open -a Finder ./'                             #Opens finder in current location
@@ -28,16 +26,21 @@ kill-all(){
 
 kill-jars(){
   echo "Killing all Java Processes"
-  pkill -f 'java -jar'
+  # pkill -f 'java -jar'
+  killall -9 java
 }
 
-setup-camelot(){
+setup-ill(){
 
+   echo "Killing IntelliJ"
+   pkill -f "IntelliJ" 
+     echo "killing all chromes"
+   pkill chrome
   # useful info:
   #  https://www.macobserver.com/tmo/article/how-to-launch-os-x-apps-from-the-command-line
 
    ## close all windows/process
-   echo "Setting up Camelot"
+   echo "Setting up ILL"
    kill-jars
    killall node
    echo "Opening JAR"
@@ -89,6 +92,7 @@ setup-camelot(){
   echo "Opening Second window for Excalibur"
   osascript -e 'tell application "Terminal" to do script "cd ~/work/illinois-aem/excalibur-mock; mvn clean install -Prun-excalibur-mock"'
 
+  # go to the npm folder (javascript) and run npm start
   echo "Waiting 30 seconds for Excalibur"
   sleep 30
 
@@ -99,7 +103,64 @@ setup-camelot(){
   echo "Finished"
 }
 
-doubleGitPull(){
+
+
+
+setup-pli(){
+
+  # useful info:
+  #  https://www.macobserver.com/tmo/article/how-to-launch-os-x-apps-from-the-command-line
+
+   ## close all windows/process
+   echo "Setting up PLI"
+
+   echo "Killing IntelliJ"
+   pkill -f "IntelliJ" 
+
+   kill-jars
+   killall node
+
+   echo "killing all chromes"
+   pkill chrome
+
+   sleep 10
+
+   echo "Opening JAR"
+   open -g -a Finder ~/AEM/pli/cq-quickstart-p4502.jar 
+
+   echo "Opening Notes"
+   open -g -a /Applications/Notes.app/
+   echo "Opening Mail"
+   open -g -a /Applications/Mail.app/
+   echo "Opening Slack"
+   open -g -a /Applications/Slack.app/
+
+   echo "Opening Chrome"
+   open -g -a /Applications/Google\ Chrome.app/
+
+   echo "Opening IJ"
+   cd ~/work/ctp-lottery-ie-aem/
+   ll
+   open -g -a /Applications/IntelliJ\ IDEA.app .
+
+  echo "Waiting 120 seconds before npm install etc"
+  sleep 120
+
+  echo "maven install"
+  mvn clean install -PautoInstallPackage
+
+  killall node
+ 
+  # go to the npm folder (javascript) and run npm start
+  echo "Waiting 30 seconds"
+  sleep 30
+  echo "Opening Third for npm install"
+  osascript -e 'tell application "Terminal" to do script "cd ~/work/ctp-lottery-ie-aem/ui.apps/src/main; npm run build && npm run aem:watch"'
+
+  echo "Finished"
+}
+
+doubleGitPull() {
   echo "pulling thrice";
   git pull && git pull && git pull;
 }

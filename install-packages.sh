@@ -15,6 +15,31 @@ done
 
 # TODO,
 # extract dependies from /META-INF/vault/properties.xml
+# unzip -p 03-cq-6.3.0-featurepack-19008-1.0.6.zip META-INF/vault/properties.xml >file.txt
+
+
+# <?xml version="1.0" encoding="utf-8" standalone="no"?>
+# <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+# <properties>
+# <comment>FileVault Package Properties</comment>
+# <entry key="createdBy">Adobe Systems Incorporated</entry>
+# <entry key="name">cq-6.3.0-featurepack-19008</entry>
+# <entry key="uploaded">2017-10-09T10:32:24.407-04:00</entry>
+# <entry key="requiresRestart">false</entry>
+# <entry key="created">2017-10-09T13:10</entry>
+# <entry key="groupId">com.adobe.cq.feature</entry>
+# <entry key="uploadedBy">gknob@adobe.com</entry>
+# <entry key="version">1.0.6</entry>
+# <entry key="dependencies">day/cq60/product:cq-dam-cfm-content:0.9.344</entry>
+# <entry key="requiresRoot">true</entry>
+# <entry key="description">FP for AEM 6.3: Structured Content Fragments</entry>
+# <entry key="group">adobe/cq630/featurepack</entry>
+# <entry key="artifactId">cq-6.3.0-featurepack-19008</entry>
+# <entry key="path">/etc/packages/adobe/cq630/featurepack/cq-6.3.0-featurepack-19008.zip</entry>
+# </properties>
+
+
+
 # press Y if you want to proceed
 #  check for installed packages at the end
 #  check it matches the current ones. Make them green.

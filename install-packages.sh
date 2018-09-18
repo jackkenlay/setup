@@ -14,7 +14,8 @@ for z in *.zip; do
 done
 
 # TODO,
-#  press Y if you want to proceed
+# extract dependies from /META-INF/vault/properties.xml
+# press Y if you want to proceed
 #  check for installed packages at the end
 #  check it matches the current ones. Make them green.
 # curl -u admin:admin -F file=@"$z" -F name="$name" -F force="true" -F install="true" http://localhost:4502/crx/packmgr/service.jsp

@@ -38,6 +38,14 @@ done
 # <entry key="path">/etc/packages/adobe/cq630/featurepack/cq-6.3.0-featurepack-19008.zip</entry>
 # </properties>
 
+# to get the line:
+# grep -i "dependencies" file.txt
+
+# gets everything but the <>
+#  grep -i '<entry key="dependencies">[^<]*<' file.txt | grep -o '>[^<]*<' 
+
+# Gets the depencies
+ grep -i '<entry key="dependencies">[^<]*<' file.txt | grep -o '>[^<]*<' | sed 's:^.\(.*\).$:\1:'
 
 
 # press Y if you want to proceed

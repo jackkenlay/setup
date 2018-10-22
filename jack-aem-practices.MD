@@ -36,3 +36,6 @@ Complete with the SELF operator
 
 ## Other good front end ideas
 Media Queries, ie tablet, mobile and desktop. How to use them within components, camelot will be a good reference for this.
+
+### Best practices for clientlib setup
+(run by alex, ie clielib cat project.component.name)

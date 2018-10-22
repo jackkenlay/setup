@@ -1,1 +1,25 @@
 
+# My AEM Practices
+A file showing the tools and trinkets I use day to day to make developing AEM as smooth as possible.
+
+## aem-front
+Mostly use the plugin for cmd+e shortcuts to switch between wmcmode=disabled and edit mode.
+
+## aemsync
+Use for front-end dev, easy to install and makes front end development much easier
+
+## Chrome shortcuts
+Probably more handy for beginners since some of them (like useradmin) arnt easy to find on your own.
+Using chrome I've made some shortcuts that will navigate to AEM page on that domain.
+ie crx/de, useradmin, osgi services, components etc.
+A handy one is the logs, if you have access to a servers page but not the terminal, then you can use the tail logs shortcut to view the logs of said server (despite not having access).
+
+## Setup bash scripts
+Setup scripts to run when i first begin work on a project.
+
+Handy to be able to switch between projects since it 'should' close everything and restart. Handy if you're working between 2 projects day-to-day and you need to switch between AEM instances.
+
+Handy for those of you who are lazy like me and can't be bothered tailing logs/running aem in debug mode each morning.
+
+## Terminal setup
+personally, I use git from CLI, these are the tools, colours/aliases i use.

@@ -23,6 +23,8 @@ Handy for those of you who are lazy like me and can't be bothered tailing logs/r
 
 ## Terminal setup
 personally, I use git from CLI, these are the tools, colours/aliases i use. Brew.
+terminal search function, like control+r to reverse search for a maven clean install
+keep pressing control+r to keep on searching
 
 ## install package cli (WIP)
 a CLI command to quickly upload and install a package, can be handy if you're AEM is often like mine and spends 10-20 minutes showing loads of installed package.
@@ -39,3 +41,6 @@ Media Queries, ie tablet, mobile and desktop. How to use them within components,
 
 ### Best practices for clientlib setup
 (run by alex, ie clielib cat project.component.name)
+
+## Keyboard shortcuts
+Seems trivial but it does speed up development, especially shifting through tabs, deleting tabs, cmd+w is handy when flicking through aem pages. and cmd + \` to switch between my work email chrome and personal. Handy for keeping plugins seperate 

@@ -18,6 +18,9 @@ done
 # unzip -p 03-cq-6.3.0-featurepack-19008-1.0.6.zip META-INF/vault/properties.xml >file.txt
 
 
+# Need to parse the string of depencies:
+
+
 # <?xml version="1.0" encoding="utf-8" standalone="no"?>
 # <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 # <properties>

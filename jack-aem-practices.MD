@@ -26,3 +26,6 @@ personally, I use git from CLI, these are the tools, colours/aliases i use.
 
 ## install package cli (WIP)
 a CLI command to quickly upload and install a package, can be handy if you're AEM is often like mine and spends 10-20 minutes showing loads of installed package.
+
+## IntelliJ plugin (WIP)
+I use for creating components, more to come.

@@ -29,3 +29,10 @@ a CLI command to quickly upload and install a package, can be handy if you're AE
 
 ## IntelliJ plugin (WIP)
 I use for creating components, more to come.
+
+## BEM
+My personal preference on naming conventions for components and how to do the LESS
+Complete with the SELF operator
+
+## Other good front end ideas
+Media Queries, ie tablet, mobile and desktop. How to use them within components, camelot will be a good reference for this.

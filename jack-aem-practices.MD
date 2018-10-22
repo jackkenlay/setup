@@ -29,6 +29,10 @@ keep pressing control+r to keep on searching
 ## install package cli (WIP)
 a CLI command to quickly upload and install a package, can be handy if you're AEM is often like mine and spends 10-20 minutes showing loads of installed package.
 
+## Intelli Vault
+How to install, set up the AEM project
+How to remove the frustrating 'ok' boxes and recommended shortcuts
+
 ## IntelliJ plugin (WIP)
 I use for creating components, more to come.
 

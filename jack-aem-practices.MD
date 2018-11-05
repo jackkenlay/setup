@@ -47,7 +47,8 @@ Media Queries, ie tablet, mobile and desktop. How to use them within components,
 (run by alex, ie clielib cat project.component.name)
 
 ## Keyboard shortcuts
-Seems trivial but it does speed up development, especially shifting through tabs, deleting tabs, cmd+w is handy when flicking through aem pages. and cmd + \` to switch between my work email chrome and personal. Handy for keeping plugins seperate 
+Seems trivial but it does speed up development, especially shifting through tabs, deleting tabs, cmd+w is handy when flicking through aem pages. and cmd + \` to switch between my work email chrome and personal. Handy for keeping plugins seperate.
+https://github.com/jackkenlay/setup/blob/master/shortcuts.md
 
 ## franz
 If you are a social media messaging addict...

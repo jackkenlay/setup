@@ -22,14 +22,29 @@ Handy to be able to switch between projects since it 'should' close everything a
 Handy for those of you who are lazy like me and can't be bothered tailing logs/running aem in debug mode each morning.
 
 ## Terminal setup
-personally, I use git from CLI, these are the tools, colours/aliases i use. Brew.
+personally, I use git from CLI, these are the tools, colours/aliases/git prompts i use. Brew.
 terminal search function, like control+r to reverse search for a maven clean install
 keep pressing control+r to keep on searching
+
+## Git
+```git add -p```
+```git commit -m "Made the component look beautiful using SCSS"```
+```git pull```
+```git push```
+```git checkout -``` (Check out last previous branch)
+```git checkout branch-name```
+```git checkout -b feature/my-new-branch-name```
+```git reset --hard```
+```git status```
+```git stash```
+```git stash pop```
+```git stash clear```
+
 
 ## install package cli (WIP)
 a CLI command to quickly upload and install a package, can be handy if you're AEM is often like mine and spends 10-20 minutes showing loads of installed package.
 
-## Intelli Vault
+## IntelliVault
 How to install, set up the AEM project
 How to remove the frustrating 'ok' boxes and recommended shortcuts
 

@@ -31,6 +31,25 @@ https://support.apple.com/en-gb/HT204895
 ### Quit (close all tabs)
 ⌘ + Q
 
+## IntelliJ
+
+### Duplicate Line
+⌘ + D
+### Delete line and go to beginning
+⌘ + backspace
+### Close tab
+⌘ + W
+### Change tab
+⇧ + ⌘ + [
+⇧ + ⌘ + ]
+### Save
+⌘ + S
+### Suggested Keymappings:
+### IntelliVault Push
+⌘ + P
+### Write console.log
+cl+tab (see https://medium.com/netscape/intellij-live-template-for-console-log-that-will-improve-your-daily-development-life-ef1320a8fe81)
+
 ## iTerm
 
 ### New Tab

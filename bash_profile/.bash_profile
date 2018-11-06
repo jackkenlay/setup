@@ -65,6 +65,12 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 
 bring-terminal-to-front(){
   osascript -e 'tell application "Terminal" to activate'
+  organise-terminal-windows
+}
+
+mount-london-nas(){
+  mkdir -p ~/LondonNAS && mount -t smbfs //admin:password@192.168.1.191/Users/jackk ~/LondonNAS/;
+  echo "Done";
 }
 
 setup-cmat(){

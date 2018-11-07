@@ -111,6 +111,9 @@ setup-cmat(){
   cd ''"$mvncleaninstalldirectory"''
   echo "maven install"
   mvn clean install -PautoInstallPackage ||  mvn clean install -PautoInstallPackage
+
+  echo "Starting AEM Sync"
+  osascript -e 'tell application "Terminal" to do script "cd '"$mvncleaninstalldirectory"'; aemsync"'
   
   bring-terminal-to-front
   echo "Setup CMAT finished"

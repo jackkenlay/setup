@@ -110,7 +110,7 @@ setup-cmat(){
 
   cd ''"$mvncleaninstalldirectory"''
   echo "maven install"
-  mvn clean install -PautoInstallPackage
+  mvn clean install -PautoInstallPackage ||  mvn clean install -PautoInstallPackage
   
   bring-terminal-to-front
   echo "Setup CMAT finished"

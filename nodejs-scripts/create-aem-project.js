@@ -3,6 +3,7 @@ var List = require('prompt-list');
 const fs = require('fs');
 var prompt = require('prompt');
 var Prompt = require('prompt-checkbox');
+var cmd = require('node-cmd');
 
 const aemPackagesDir = '/Volumes/Users/jackk/AEM/packages/';
 const AEMNASDir = '/Volumes/Users/jackk/AEM/';
@@ -32,11 +33,9 @@ async function getRequiredAEMVersion(){
 
 
 //need to get a list of all zip files in there
-
 function getAvailableAEM(){
 
 }
-
 
 async function listAllPackagesByAEM(inputAEM) {
     return new Promise((resolve,reject)=>{
@@ -81,13 +80,6 @@ async function getProjectParams(){
 // let aemUrl = AEMNASDir +'6.4/';
 //       let testDestination = '~/AEM/6.4/';
 //       copyDirectory(aemUrl,testDestination);
-
-
-
-
-
-
-
 
 async function getListOfPackagesToCopy(aemVersion){
     let availablePackages = await listAllPackagesByAEM(aemVersion);
@@ -135,52 +127,93 @@ async function copyDirectory(source,destination){
     });
 }
 
-async function cloneRepo(repoUrl){
+async function cloneRepo(repoUrl, targetPath){
+    //https://www.npmjs.com/package/node-cmd
+    console.log('Cloning repo: ' + repoUrl + ' to ' + targetPath);
+    return new Promise((resolve,reject)=>{
+        cmd.get(
+            `
+                git clone ${repoUrl} ${targetPath}
+            `,
+            function(err, data, stderr){
+                if (!err) {
+                   console.log('Finished cloning repo: ' + repoUrl + ' to ' + targetPath);
+                   resolve();
+                } else {
+                   console.log('error', err)
+                }
+     
+            }
+        );
+    });
+}
 
+async function copySelectedPackages(packages, destination){
+    //packages needs to be an array of filenames of packages to install
+    console.log('Copying packages:');
+    for (var i = 0; i < packages.length; i++) { 
+        await copyDirectory(packages[i], destination);
+    }
+    console.log('Completed');
 }
     
+
+
+
+async function makeDirIfNotExist(dir){
+    console.log('Creating directory: ' + dir);
+    if (!fs.existsSync(dir)){
+        fs.mkdirSync(dir);
+    }
+}
+
+
+
 async function init(){
     console.log('Creating New AEM project\n');
 
-
-    /*
     let params = await getProjectParams();
     params.AEMVersion = await getRequiredAEMVersion();
     params.packagesToInstall = await getListOfPackagesToCopy(params.AEMVersion);
     
     console.log('Project Data:');
     console.log(JSON.stringify(params,null,4));
-
-    //TODO next
     
     //copy the AEM from the NAS to the local, complete with name
     let AEMFolderToCopy = AEMNASDir + params.AEMVersion + '/'; 
     
     // console.log('Aem folder to copy: ' + AEMFolderToCopy);
-    let distinationDIR = localAEMDirectory + params.projectName + '-' + params.AEMVersion;
+    let newAEMDirectory = localAEMDirectory + params.projectName + '-' + params.AEMVersion;
     // console.log('Destination: ' + distinationDIR);
-    await copyDirectory(AEMFolderToCopy, distinationDIR);
-    */
-
-
-    //clone the repo.
-
-    let repoToClone = 'https://stash.ensemble.com/scm/cs/aem.git';
-    await cloneRepo(repoToClone);
+    await copyDirectory(AEMFolderToCopy, newAEMDirectory);
     
+    //clone the repo.
+    let repoDestination = AEMProjectDirectory + params.projectName;
+    await cloneRepo(params.repoUrl, repoDestination);
+    console.log('finished cloning repo');
+    
+    let packagesDirectory = newAEMDirectory + '/packages/';
+    await makeDirIfNotExist(packagesDirectory);
+    await copySelectedPackages(params.packagesToInstall, packagesDirectory);
 
-
-
+    //test input data
+    //credit-safe
+    //6.3
+    //https://stash.ensemble.com/scm/cs/aem.git
+    //todo
+    //copy the selected packages accross to the AEM folder
+    //install the packages
 
 
 
 
     //later, do they have a content.package that they can select from wherever.
     //later, make a backup after init project, so they always have something to go back to if they fuck up their AEM
+    //later, give the option to save this config in a json file.
+    //later, if yes, give the option to parse the input from a json.config file
+    // make a global settings config, with the consts in
 }
 init();
-
-
 
 
 

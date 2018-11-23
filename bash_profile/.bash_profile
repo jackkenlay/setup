@@ -8,6 +8,10 @@ alias "vs=open -a /Applications/Visual\ Studio\ Code.app/"
 alias gp="doubleGitPull"
 alias chrome-unsafe='open -a Google\ Chrome --args --disable-web-security --user-data-dir' #Open up XSS Chrome
 
+cd ~/personal/setup && git pull &
+echo "Pulled latest changes";
+cd ~/
+
 kill-all() {
 # Needs researching
   echo "Killing all"
@@ -70,8 +74,126 @@ bring-terminal-to-front(){
 
 mount-london-nas(){
   mkdir -p ~/LondonNAS && mount -t smbfs //admin:password@192.168.1.191/Users/jackk ~/LondonNAS/;
-  echo "Done";
+  echo "Mounted NAS";
 }
+
+
+
+
+create-new-project(){
+  node ~/personal/setup/nodejs-scripts/create-aem-project.js
+# TODO
+# Change to node
+# Selection input
+# Packages
+# Starting with Admin admin (probably easier with NodeJS)
+# Change to Rsync
+# Call from Bash, make a nodeJS file in my setup
+# Ask for prompts for repo and stuff
+# After starting AEM, then it asks for logfile, incase it's created after project creation?
+# a JSON file with all of the set up so you can alter it later on
+# Makes a setup-projectName function
+
+  # AEMNASdir="/Volumes/Users/jackk/AEM/";
+  # # input:
+  #   # AEM version
+  #   # Packages
+  #   # Repo url
+  #   # MVN clean install dir.
+  #   # Logfile dir
+  #   # AEM filename
+  #   # repo folder name (gets after cloning)
+  
+  # # Steps
+  #   # get a project name
+  #     projectName="creditsafe-aem"
+  #   # Ensure LondonNAS is connected
+  #     # If not then mount it
+  #     mount-london-nas
+  #   # Asks which AEM you want
+  #     # TODO have manual input here, from list or just read it
+
+  #   # Asks which packages you want
+  #   # Asks for Repo URL
+  #     repoUrl="https://stash.ensemble.com/scm/cs/aem.git"
+  #     echo "Repo URL: $repoUrl"
+  #   # goes to work folder & clones repo
+  #     cd ~/work
+  #     git clone "$repoUrl" "$projectName"
+  #     echo "Repo Cloned"
+  #   # goes to AEM folder & clones correct AEM version from NAS
+  #     echo "Copying AEM from NAS, please wait (normally takes 1 minutes on the 5ghz wifi)"
+  #     cd ~/AEM/
+  #     SRC_DIR="$AEMNASdir$aemVersion/";
+  #     mkdir ~/AEM/$projectName-$aemVersion && cp -r $SRC_DIR ~/AEM/$projectName-$aemVersion
+  #     echo "Copied AEM"
+
+            # TODO USE RSYNC w/progress bar BUT THE PIECE OF SHIT DOESNT WORK
+            # SRC_DIR="$AEMNASdir$aemVersion/";
+            # OPTIONS="-avz";
+            # DST_DIR="~/AEM/";
+            # echo "$SRC_DIR";
+            # echo "$DST_DIR";
+            # /usr/bin/rsync $OPTIONS "$SRC_DIR" "$DST_DIR";
+    
+    # Gets available packages from directory in NAS and asks user which ones they want.
+    # Starts AEM with admin admin
+    
+    
+    # Installs packages
+      # runs an install on all packages the total amount of packages there are, to ensure all of them have been installed? 
+    # creates a bash function for my thing.
+}
+
+
+setup-hsbc(){
+  # Note the directory doesnt have forward slashes at beggining or end.
+  aemdirectory=~/"AEM/hsbc-6.4"
+  
+  repodirectory=~/"work/hsbc-forms"
+  aemfilename="cq-quickstart-6.4.0.jar"
+  mvncleaninstalldirectory=~/"work/hsbc-forms"
+  logfile="crx-quickstart/logs/project-hsbc-forms.log"
+  
+  echo "Setting up HSBC"
+  echo "Killing IntelliJ"
+  pkill -f "IntelliJ"
+
+  kill-jars
+  killall node
+
+  echo "killing all chromes"
+  pkill chrome
+
+  countdown "00:00:10"
+
+  echo "Opening Logs"
+  osascript -e 'tell application "Terminal" to do script "tail -f '"$aemdirectory"'/'"$logfile"'"'
+
+  echo "Opening JAR"
+  osascript -e 'tell application "Terminal" to do script "cd '"$aemdirectory"'; java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=30303 -jar '$aemfilename'" '
+  
+  open-normal-apps
+  bring-terminal-to-front
+  organise-terminal-windows
+
+  echo "Opening IJ"
+  cd ''"$repodirectory"''
+  open -g -a /Applications/IntelliJ\ IDEA.app .
+
+  wait-and-bring-terminals-to-front  
+
+  cd ''"$mvncleaninstalldirectory"''
+  echo "maven install"
+  mvn clean install -PautoInstallPackage ||  mvn clean install -PautoInstallPackage
+
+  echo "Starting AEM Sync"
+  osascript -e 'tell application "Terminal" to do script "cd '"$mvncleaninstalldirectory"'; aemsync"'
+  
+  bring-terminal-to-front
+  echo "Setup HSBC finished"
+}
+
 
 setup-cmat(){
   # Note the directory doesnt have forward slashes at beggining or end.
@@ -101,6 +223,7 @@ setup-cmat(){
   open-normal-apps
   bring-terminal-to-front
   organise-terminal-windows
+  open -g -a Simulator.app
 
   echo "Opening IJ"
   cd ''"$repodirectory"''
@@ -117,6 +240,24 @@ setup-cmat(){
   
   bring-terminal-to-front
   echo "Setup CMAT finished"
+}
+
+close-social(){
+  echo "Closing all social apps"
+  osascript -e 'quit app "Slack"'
+  osascript -e 'quit app "Rocket.Chat+"'
+  osascript -e 'quit app "Skype"'
+  osascript -e 'quit app "Mail"'
+  osascript -e 'quit app "Franz"'
+  echo "Done"
+}
+open-social(){
+  echo "Opening All Social Apps"
+  open -g -a /Applications/Rocket.Chat+.app/
+  open -g -a /Applications/Skype.app/
+  open -g -a /Applications/Mail.app/
+  open -g -a /Applications/Slack.app/
+  echo "Done"
 }
 
 wait-and-bring-terminals-to-front(){

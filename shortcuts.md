@@ -44,11 +44,17 @@ https://support.apple.com/en-gb/HT204895
 ⇧ + ⌘ + ]
 ### Save
 ⌘ + S
+### Move Line Up/Down
+⇧ + ⌥ + ↓
+### Move Section Up/Down
+⇧ + ⌘ + ↓
+
 ### Suggested Keymappings:
 ### IntelliVault Push
 ⌘ + P
 ### Write console.log
 cl+tab (see https://medium.com/netscape/intellij-live-template-for-console-log-that-will-improve-your-daily-development-life-ef1320a8fe81)
+
 
 ## iTerm
 

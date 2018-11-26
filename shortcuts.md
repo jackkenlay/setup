@@ -48,7 +48,8 @@ https://support.apple.com/en-gb/HT204895
 ⇧ + ⌥ + ↓
 ### Move Section Up/Down
 ⇧ + ⌘ + ↓
-
+### Surround with...
+⌘ + ⌥ + t
 ### Suggested Keymappings:
 ### IntelliVault Push
 ⌘ + P

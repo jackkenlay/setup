@@ -52,6 +52,8 @@ https://support.apple.com/en-gb/HT204895
 ⌘ + ⌥ + t
 ### Enter Debug Mode
 ctrl + D
+### (Debug) Step Over
+fn + F8
 ### Add Debug Breakpoint
 fn + ⌘ + F8
 ### Suggested Keymappings:

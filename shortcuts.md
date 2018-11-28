@@ -50,6 +50,8 @@ https://support.apple.com/en-gb/HT204895
 ⇧ + ⌘ + ↓
 ### Surround with...
 ⌘ + ⌥ + t
+### Enter Debug Mode
+ctrl + D
 ### Add Debug Breakpoint
 fn + ⌘ + F8
 ### Suggested Keymappings:

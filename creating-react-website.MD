@@ -37,9 +37,9 @@ sudo git clone https://github.com/jackkenlay/my-new-website.git .
 sudo npm install
 
 ### Config NGINX
-Create config file: /etc/nginx/sites-available/my-new-website.com
-Replace all urls
-! If multiple servers on 1 server, then ensure the new port number isnt conflicting with any others!!
+* Create config file: /etc/nginx/sites-available/my-new-website.com
+* Replace all urls
+* ! If multiple servers on 1 server, then ensure the new port number isnt conflicting with any others!!
 ```
 server {
         listen 80;

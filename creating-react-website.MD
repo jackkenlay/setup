@@ -29,7 +29,7 @@ Add remote repo.
 ## Create on the server
 
 ### To Log onto Server
-```ssh -i ./../amazon/workmac.pem ubuntu@ec2-35-178-20-119.eu-west-2.compute.amazonaws.com```
+```ssh -i ~/personal/amazon/workmac.pem ubuntu@ec2-35-178-20-119.eu-west-2.compute.amazonaws.com```
 
 ### Server location
 copy files to /var/www/my-new-website.com/html/
@@ -79,6 +79,7 @@ node app.js
 (ensuring forever is installed, npm install forever -g)
 sudo npm run build
 sudo forever start app.js
+sudo systemctl restart nginx
 
 
 

@@ -5,6 +5,7 @@
 go to personal/
 create-react-app my-new-website
 ### Create Server
+npm install express
 touch ./app.js
 input the following:
 ```

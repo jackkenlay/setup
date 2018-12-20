@@ -5,8 +5,7 @@
 go to personal/
 create-react-app my-new-website
 ### Create Server
-mkdir ./server/
-touch ./server/app.js
+touch ./app.js
 input the following:
 ```
 const express = require('express');

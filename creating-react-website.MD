@@ -33,6 +33,7 @@ Add remote repo.
 
 ### Server location
 copy files to /var/www/my-new-website.com/html/
+sudo git clone https://github.com/jackkenlay/my-new-website.git .
 
 ### Config NGINX
 Create config file: /etc/nginx/sites-available/my-new-website.com
@@ -43,7 +44,7 @@ server {
         listen 80;
         listen [::]:80;
 
-        root /var/www/my-new-website.com/html/client;
+        root /var/www/my-new-website.com/html;
         index index.html index.htm index.nginx-debian.html;
 
         server_name my-new-website.com www.my-new-website.com;

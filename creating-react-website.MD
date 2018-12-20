@@ -1,31 +1,34 @@
-go to personal/
+# Creating my-new-website url: my-new-website.com
 
+## Create website
+go to personal/
 create-react-app my-new-website
 
-make the repo. Add remote repo.
+## Create Repo
+Make the repo on github. 
+Add remote repo.
 
-#to do
+## Create on the server
 
-### Create on the server
-
-## To Log onto Server
+### To Log onto Server
 ```ssh -i ./../amazon/workmac.pem ubuntu@ec2-35-178-20-119.eu-west-2.compute.amazonaws.com```
 
-### Server
-Move files to /var/www/my-new-website.com/html/
+### Server location
+copy files to /var/www/my-new-website.com/html/
 
-
-### Config nginx
+### Config NGINX
 Create config file: /etc/nginx/sites-available/my-new-website.com
+Replace all urls
+! If multiple servers on 1 server, then ensure the new port number isnt conflicting with any others!!
 ```
 server {
         listen 80;
         listen [::]:80;
 
-        root /var/www/nongrose.com/html/client;
+        root /var/www/my-new-website.com/html/client;
         index index.html index.htm index.nginx-debian.html;
 
-        server_name nongrose.com www.nongrose.com;
+        server_name my-new-website.com www.my-new-website.com;
         
         location / {
         proxy_pass http://172.31.16.226:3002;

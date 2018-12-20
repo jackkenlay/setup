@@ -37,6 +37,7 @@ sudo git clone https://github.com/jackkenlay/my-new-website.git .
 sudo npm install
 
 ### Config NGINX
+https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-16-04
 * Create config file: /etc/nginx/sites-available/my-new-website.com
 * Replace all urls
 * ! If multiple servers on 1 server, then ensure the new port number isnt conflicting with any others!!

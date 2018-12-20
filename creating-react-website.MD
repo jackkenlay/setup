@@ -64,3 +64,8 @@ server {
 
 ### Github webhook
 config github webhook when merge to master
+
+## to Run
+### Locally (using node)
+node app.js
+### On server

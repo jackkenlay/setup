@@ -1,9 +1,27 @@
 # Creating my-new-website url: my-new-website.com
 
 ## Create website
+### Create client and directory
 go to personal/
 create-react-app my-new-website
+### Create Server
+mkdir ./src/
+touch ./src/app.js
+input the following:
+```
+const express = require('express');
+const path = require('path');
+const app = express();
+let portNumber = 3002;
 
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+app.listen(portNumber);
+```
 ## Create Repo
 Make the repo on github. 
 Add remote repo.

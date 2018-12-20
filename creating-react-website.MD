@@ -69,18 +69,21 @@ config github webhook when merge to master
 
 ### Namecheap
 go to domains -> my-new-domain.com -> advanced DNS:
+```
 A Record            @          my-new-ip
 A Record            www          my-new-ip
-
+```
 ## to Run
 ### Locally (using node)
 node app.js
 ### On server
+
 (ensuring forever is installed, npm install forever -g)
+```
 sudo npm run build
 sudo forever start app.js
 sudo systemctl restart nginx
-
+```
 
 
 

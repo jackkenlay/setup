@@ -2,8 +2,8 @@
 
 ## Create website
 ### Create client and directory
-go to personal/
-create-react-app my-new-website
+* go to personal/
+* create-react-app my-new-website
 ### Create Server
 npm install express
 touch ./app.js

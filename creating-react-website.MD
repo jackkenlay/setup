@@ -78,7 +78,6 @@ A Record            www          my-new-ip
 ### Locally (using node)
 node app.js
 ### On server
-
 (ensuring forever is installed, npm install forever -g)
 ```
 sudo npm run build
@@ -86,6 +85,22 @@ sudo forever start app.js
 sudo systemctl restart nginx
 ```
 
+## To Deploy
+* create the following file as deploy.sh
+```
+in bash, website file directory on server
+log onto server as admin
+change to sudo
+go to that dirrectory
+git pull
+git pull
+git pull
+npm install
+forever restart app.js
+wait 5 seconds
+log off
+```
+* bash deploy.sh
 ## Add to google analytics
 ## Add to google search console
 

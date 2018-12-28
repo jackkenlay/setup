@@ -86,19 +86,21 @@ sudo systemctl restart nginx
 ```
 
 ## To Deploy
-* create the following file as deploy.sh
+* Run the following command to create deploy.sh
 ```
-in bash, website file directory on server
-log onto server as admin
-change to sudo
-go to that dirrectory
+echo '
+# in bash, website file directory on server
+# log onto server as admin
+# change to sudo
+# go to that dirrectory
 git pull
 git pull
 git pull
 npm install
 forever restart app.js
-wait 5 seconds
-log off
+sleep 10
+# log off
+' > deploy.sh
 ```
 * bash deploy.sh
 ## Add to google analytics

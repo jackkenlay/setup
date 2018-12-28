@@ -23,8 +23,10 @@ app.get('/', function(req, res) {
 app.listen(portNumber);
 ```
 ## add the following to .gitignore
-deploy.sh
-package-lock.json
+* deploy.sh
+* package-lock.json
+
+
 ## Create Repo
 Make the repo on github. 
 Add remote repo.

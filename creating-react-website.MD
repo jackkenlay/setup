@@ -32,9 +32,9 @@ Add remote repo.
 ```ssh -i ~/personal/amazon/workmac.pem ubuntu@ec2-35-178-20-119.eu-west-2.compute.amazonaws.com```
 
 ### Server location
-copy files to /var/www/my-new-website.com/html/
-sudo git clone https://github.com/jackkenlay/my-new-website.git .
-sudo npm install
+* copy files to /var/www/my-new-website.com/html/
+* sudo git clone https://github.com/jackkenlay/my-new-website.git .
+* sudo npm install
 
 ### Config NGINX
 https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-16-04

@@ -4,7 +4,7 @@
 ### Create client and directory
 * go to personal/
 * create-react-app my-new-website
-### Create Server
+### Create Node Server
 npm install express
 touch ./app.js
 input the following:
@@ -22,6 +22,9 @@ app.get('/', function(req, res) {
 
 app.listen(portNumber);
 ```
+## add the following to .gitignore
+deploy.sh
+package-lock.json
 ## Create Repo
 Make the repo on github. 
 Add remote repo.

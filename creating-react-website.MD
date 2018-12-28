@@ -86,5 +86,7 @@ sudo forever start app.js
 sudo systemctl restart nginx
 ```
 
+## Add to google analytics
+## Add to google search console
 
 

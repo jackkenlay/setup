@@ -34,6 +34,8 @@ Add remote repo.
 ### Server location
 * copy files to /var/www/my-new-website.com/html/
 * sudo git clone https://github.com/jackkenlay/my-new-website.git .
+* git config credential.helper store
+* git pull
 * sudo npm install
 
 ### Config NGINX

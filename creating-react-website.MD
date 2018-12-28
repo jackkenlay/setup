@@ -91,17 +91,30 @@ sudo systemctl restart nginx
 * Run the following command to create deploy.sh
 ```
 echo '
-# in bash, website file directory on server
-# log onto server as admin
-# change to sudo
-# go to that dirrectory
-git pull
-git pull
-git pull
-npm install
-forever restart app.js
-sleep 10
-# log off
+ssh -i ~/personal/amazon/workmac.pem ubuntu@ec2-35-178-20-119.eu-west-2.compute.amazonaws.com "
+echo \"logged in\"
+sleep 2
+echo \"changing to website directory\"
+cd /var/www/nongrose.com/html/
+ls
+sleep 5
+echo \"pulling..\"
+sudo git pull
+sudo git pull
+echo \"pulled.\"
+echo \"npm installing...\"
+sudo npm install
+sleep 5
+echo \"done.\"
+echo \"running npm build...\"
+sudo npm run build
+echo \"done.\"
+echo \"restarting app.js.\"
+sudo forever restart app.js
+echo \"done.\"
+echo \"logging off....\"
+sleep 5
+"
 ' > deploy.sh
 ```
 * bash deploy.sh

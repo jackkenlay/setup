@@ -112,6 +112,7 @@ node app.js
 ### On server
 (ensuring forever is installed, npm install forever -g)
 ```
+cd /var/www/my-new-website.com/html
 sudo npm run build
 sudo forever start app.js
 sudo systemctl restart nginx

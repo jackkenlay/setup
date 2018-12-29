@@ -77,6 +77,19 @@ server {
         }
 }
 ```
+* Enable Server Block:
+```
+sudo ln -s /etc/nginx/sites-available/my-new-website.com /etc/nginx/sites-enabled/
+```
+* Check nginx config files
+```
+sudo nginx -t
+```
+* Restart nginx
+```
+sudo systemctl restart nginx
+```
+
 
 ### Config SSL
 ### Using Certbot

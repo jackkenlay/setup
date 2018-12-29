@@ -147,8 +147,9 @@ echo \"done.\"
 echo \"logging off....\"
 sleep 5
 "
-' > deploy.sh
+' > deploy.sh && echo 'NOW CHANGE THE URL'
 ```
+* DONT FORGET to change the DIR
 * bash deploy.sh
 ## Add to google analytics
 ## Add to google search console

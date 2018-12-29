@@ -6,7 +6,7 @@
 * create-react-app my-new-website
 ### Create Node Server
 * cd my-new-website
-* npm install express
+* npm install express --save
 * Run the following:
 ```
 echo '
@@ -138,4 +138,9 @@ sleep 5
 ## Add to google analytics
 ## Add to google search console
 
+## Development
 
+### Add Reactstrap
+```
+npm install --save reactstrap react react-dom
+```

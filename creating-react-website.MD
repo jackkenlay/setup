@@ -17,7 +17,7 @@ let portNumber = 3002;
 
 app.use(express.static(path.join(__dirname, 'build')));
 
-app.get('/', function(req, res) {
+app.get(/'//', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
@@ -32,6 +32,9 @@ app.listen(portNumber);
 * deploy.sh
 * package-lock.json
 
+## Then
+* rm package-lock.json
+* npm install
 
 ## Create Repo
 Make the repo on github. 

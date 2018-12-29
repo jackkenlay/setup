@@ -92,7 +92,10 @@ A Record            www          my-new-ip
 ```
 ## to Run
 ### Locally (using node)
+```
+npm start
 node app.js
+```
 ### On server
 (ensuring forever is installed, npm install forever -g)
 ```

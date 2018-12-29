@@ -113,9 +113,10 @@ node app.js
 (ensuring forever is installed, npm install forever -g)
 ```
 cd /var/www/my-new-website.com/html
+sudo git pull
+sudo npm install
 sudo npm run build
 sudo forever start app.js
-sudo systemctl restart nginx
 ```
 
 ## To Deploy

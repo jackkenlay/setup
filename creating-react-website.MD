@@ -5,6 +5,7 @@
 * go to personal/
 * create-react-app my-new-website
 ### Create Node Server
+* cd my-new-website
 * npm install express
 * Run the following:
 ```

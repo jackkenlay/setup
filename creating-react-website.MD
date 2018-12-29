@@ -5,10 +5,10 @@
 * go to personal/
 * create-react-app my-new-website
 ### Create Node Server
-npm install express
-touch ./app.js
-input the following:
+* npm install express
+* Run the following:
 ```
+echo '
 const express = require('express');
 const path = require('path');
 const app = express();
@@ -21,7 +21,12 @@ app.get('/', function(req, res) {
 });
 
 app.listen(portNumber);
+
+' > app.js
 ```
+
+* Change port number
+
 ## add the following to .gitignore
 * deploy.sh
 * package-lock.json

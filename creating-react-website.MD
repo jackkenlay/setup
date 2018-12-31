@@ -158,5 +158,6 @@ sleep 5
 
 ### Add Reactstrap
 ```
+npm install bootstrap --save
 npm install --save reactstrap react react-dom
 ```

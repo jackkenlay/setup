@@ -127,7 +127,7 @@ ssh -i ~/personal/amazon/workmac.pem ubuntu@ec2-35-178-20-119.eu-west-2.compute.
 echo \"logged in\"
 sleep 2
 echo \"changing to website directory\"
-cd /var/www/nongrose.com/html/
+cd /var/www/my-new-website.com/html/
 ls
 sleep 5
 echo \"pulling..\"

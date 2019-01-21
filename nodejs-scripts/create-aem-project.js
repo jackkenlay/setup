@@ -192,6 +192,7 @@ async function init(){
     await cloneRepo(params.repoUrl, repoDestination);
     console.log('finished cloning repo');
     
+    //copy the selected packages accross to the AEM folder
     let packagesDirectory = newAEMDirectory + '/packages/';
     await makeDirIfNotExist(packagesDirectory);
     await copySelectedPackages(params.packagesToInstall, packagesDirectory);
@@ -201,11 +202,11 @@ async function init(){
     //6.3
     //https://stash.ensemble.com/scm/cs/aem.git
     //todo
-    //copy the selected packages accross to the AEM folder
+
+    //init AEM
+    // printf 'admin\nadmin\n' | java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=30303 -jar cq-quickstart-6.3.0.jar 
+
     //install the packages
-
-
-
 
     //later, do they have a content.package that they can select from wherever.
     //later, make a backup after init project, so they always have something to go back to if they fuck up their AEM
@@ -215,6 +216,35 @@ async function init(){
 }
 init();
 
+async function initAEMInstance(filepath, username, password) {
+    let AEMstartcommand = `printf '${username}\n${password}\n' | java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=30303 -jar ${filepath}`;
+
+    //opens in another window
+    let fullcommand = `osascript -e 'tell application "Terminal" to do script "${AEMstartcommand}"'`;
+    /*
+        this might need to be run async....
+
+        add a 3 minute timer?
+
+        run it in a new window? (see bash setup)
+    */
+    return new Promise((resolve,reject) => {
+        cmd.get(
+            `
+                ${fullcommand}
+            `,
+            function(err, data, stderr){
+                if (!err) {
+                   console.log('Finished cloning repo: ' + repoUrl + ' to ' + targetPath);
+                   resolve();
+                } else {
+                   console.log('error', err)
+                }
+     
+            }
+        );
+    });
+}
 
 
 // create-new-project(){

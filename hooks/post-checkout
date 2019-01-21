@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# chmod u+x .git/hooks/post-checkout
+
+# echo "Post checkout Git hook";
+
+branch=$(git symbolic-ref --short HEAD)
+
+# echo "**** Running post-commit hook from branch $branch"
+
+# get branch name
+
+# Get time
+
+# echo date
+
+# echo $(date) Checked out $branch;
+
+test="$(date) Checked out $branch"
+
+file=gitcheckouthistory.txt
+if [ -e "$file" ]; then
+    echo "File found!"
+    echo $test >> $file
+else
+    echo $test > $file
+    echo "file not found"
+fi
+
+# if file exists/
+# write to it
+# echo "some data for the file" >> fileName
+# else, create and write to it.
+# echo "some data for the file" > fileName

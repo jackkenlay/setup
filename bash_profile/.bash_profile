@@ -149,11 +149,13 @@ create-new-project(){
 setup-hsbc(){
   # Note the directory doesnt have forward slashes at beggining or end.
   aemdirectory=~/"AEM/hsbc-6.4"
-  
   repodirectory=~/"work/hsbc-forms"
+  # repodirectory=~/"work/portal-demo"
   aemfilename="cq-quickstart-6.4.0.jar"
   mvncleaninstalldirectory=~/"work/hsbc-forms"
-  logfile="crx-quickstart/logs/project-hsbc-forms.log"
+  # mvncleaninstalldirectory=~/"work/portal-demo"
+  # logfile="crx-quickstart/logs/project-hsbc-forms.log"
+  logfile="crx-quickstart/logs/error.log"
   
   echo "Setting up HSBC"
   echo "Killing IntelliJ"
@@ -172,7 +174,8 @@ setup-hsbc(){
 
   echo "Opening JAR"
   osascript -e 'tell application "Terminal" to do script "cd '"$aemdirectory"'; java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=30303 -jar '$aemfilename'" '
-  
+
+  echo "Opening normal apps"
   open-normal-apps
   bring-terminal-to-front
   organise-terminal-windows

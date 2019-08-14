@@ -9,4 +9,9 @@
 # node
 # npm
 # if mac (brew)
-echo "Setup .sh"
+# setup ColeMak keyboard
+
+echo "Starting Setup .sh"
+
+sudo apt update
+sudo apt install google-chrome-stable

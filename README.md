@@ -3,7 +3,7 @@
 ## To setup without git
 ```
 sudo apt install curl -y &&
-cd; &&
+cd &&
 mkdir -p personal &&
 mkdir -p setup &&
 cd setup &&

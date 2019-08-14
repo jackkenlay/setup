@@ -2,6 +2,7 @@
 
 ## To setup without git
 ```
+sudo apt install curl -y  
 cd;
 mkdir -p setup
 cd setup

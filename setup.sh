@@ -34,3 +34,8 @@ sudo mysql_secure_installation
 
 # .gitconfig
 # setup ColeMak keyboard
+# git autocomplete
+# git prompt
+# colours etc
+
+sudo reboot

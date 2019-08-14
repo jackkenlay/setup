@@ -9,3 +9,4 @@
 # node
 # npm
 # if mac (brew)
+echo "Setup .sh"

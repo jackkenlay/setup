@@ -2,11 +2,11 @@
 
 ## To setup without git
 ```
-sudo apt install curl -y  
-cd;
-mkdir -p setup
-cd setup
-curl -#L https://github.com/jackkenlay/setup/tarball/master | tar -xzv --strip-components 1
+sudo apt install curl -y &&
+cd; &&
+mkdir -p setup &&
+cd setup &&
+curl -#L https://github.com/jackkenlay/setup/tarball/master | tar -xzv --strip-components 1 &&
 sh setup.sh
 ```
 

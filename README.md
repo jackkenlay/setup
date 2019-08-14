@@ -4,6 +4,7 @@
 ```
 sudo apt install curl -y &&
 cd; &&
+mkdir -p personal &&
 mkdir -p setup &&
 cd setup &&
 curl -#L https://github.com/jackkenlay/setup/tarball/master | tar -xzv --strip-components 1 &&

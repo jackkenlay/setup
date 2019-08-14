@@ -1,5 +1,13 @@
 # Setup (WIP)
 
+## To setup without git
+```
+cd;
+mkdir -p setup
+cd setup
+curl -#L https://github.com/jackkenlay/setup/tarball/master | tar -xzv --strip-components 1 
+```
+
 ## bash_profile
 [bash_profile](/bash_profile)
 

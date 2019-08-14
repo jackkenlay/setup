@@ -1,9 +1,11 @@
-# Setup (on Linux)
-#
-# Get Curl    
-# sudo apt install curl -y  
+#!/bin/bash
+# Run from ReadMe File
 
-# cd;
-# mkdir -p setup
-# cd setup
-# curl -#L https://github.com/jackkenlay/setup/tarball/master | tar -xzv --strip-components 1 
+# Append to use this bashprofile from the normal one
+# If possible, install the other bits and pieces I use.
+
+# programs
+# chrome
+# node
+# npm
+# if mac (brew)

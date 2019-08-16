@@ -19,9 +19,7 @@ sudo apt install nodejs -y
 sudo apt install npm -y
 
 # vscode
-sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
-sudo apt-get update && sudo apt-get install ubuntu-make -y
-umake web visual-studio-code
+sudo snap install --classic code # or code-insiders
 
 # git
 sudo apt install git -y

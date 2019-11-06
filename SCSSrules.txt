@@ -211,7 +211,9 @@ nav-left,
 
 
 
-
+const stylesAsArr = styles.split('\n').map(style=>style.trim().replace(/,/g, ''))
+const finalStyle = stylesAsArr.join();
+console.log(finalStyle)
 
 
 
